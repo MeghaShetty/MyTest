@@ -1,0 +1,243 @@
+
+Software Requirements Specification
+for
+Dabbastation
+Version 1.0 approved
+Prepared by 
+Megha Shetty
+Aashvi Vora
+Divita Vora
+Sardar Patel Institute Of Technology
+27th January 2017
+
+
+
+Table of Contents
+Table of Contents    ii
+Revision History    ii
+1.    Introduction    4
+1.1    Purpose    4
+1.2    Document Conventions    4
+1.3    Intended Audience and Reading Suggestions    4
+1.4    Product Scope    4
+2.    Overall Description    5
+2.1    Product Perspective    5
+2.2    Product Functions    6
+2.3    User Classes and Characteristics    6
+2.4    Operating Environment    7
+2.5    Design and Implementation Constraints    7
+2.6    User Documentation    7
+2.7    Assumptions and Dependencies    7
+3.    External Interface Requirements    7
+3.1    User Interfaces        7
+3.2    Hardware Interfaces    7
+3.3    Software Interfaces    8
+3.4    Communications Interfaces    8
+4.    System Features    8
+4.1    Authenticated Login    8
+4.2    Notification System     9
+4.3   Order Dabba        9
+4.4    Make Payment        10
+4.5    Track Order        11
+5.    Other Nonfunctional Requirements    11
+5.1    Performance Requirements    11
+5.2    Safety Requirements    11
+5.3    Security Requirements        12
+5.4    Software Quality Attributes    12
+5.5    Business Rules        12    
+
+
+
+
+
+Revision History
+Name
+Date
+Reason For Changes
+Version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+Purpose 
+The main objective of this document is to illustrate the requirements of the project DabbaStation. The document gives the detailed description of the both functional and non-functional requirements. It provides an interface between the users and dabbawala system which will ease the process of ordering dabbas on weekly,monthly or quarterly basis. The final product of the team will be meeting the requirements of this document.
+Document Conventions
+Topics:
+Font style: Cambria
+Font size: 14
+Highlights: Bold
+General text:
+Font style: Cambria
+Font size: 12
+Highlights: Bold and italic
+
+Intended Audience and Reading Suggestions
+Stakeholders are recommended to read the document in its entirety to understand both the admin and user interfaces and the features provided by each.
+Admin and Users can skip to 2.c User Classes and Characteristics and System Features section to understand the features they will be provided with, in detail.
+1.4    Product Scope
+This system will be made with the viewpoint of managing the Mumbai Dabbawalas who provide homemade food to the respective people using the service. With the help of this system the dabbawala can deliver the food at correct time.  The benefits of the system are :
+App can be easily accessible to the customers and saves their time.
+Customers can order online at any time of the day.
+The order can be cancelled any time before the user receives the notification that the thali is out for delivery.
+Users can also order thalis and weekly specials at an added cost. 
+
+
+Overall Description
+Product Perspective
+This system will help to manage the Mumbai Dabbawalas who provide homemade food to the respective people using the service.​ Calling manually all the time, whenever you wish to order food for you or your college or for your whole organization is quite a hectic task and what if you wish to cancel some order or to change the food and wish to order something else instead of the prior one, than only this will take a lot of time and effort. This system is made with  view of reducing this manual work.
+Product Functions
+The functions of the android Dabbawala Android Project system are:
+Registration and Login:
+The user has to register by providing details like name and phone number and setting a password for the account. Combination of phone number and password will be stored in the database which will be used to authenticate the user during login.
+Admin Module:
+This administration module will be designed for taking care of all the administrating processes and steps such as forwarding all the orders to catering team, keeping track of payment details and so on.
+User Module:
+User can order the food of their own choice using this module. All the options are available for the user here for easy access of the ordering process. The user can select either the Dabbawala service to pick up their Dabba from a location and drop it at the desired location or the catering service using which they can order a Thali from the limited menu. The user will receive a notification when the Dabbawala is out for delivery.
+Food System Module:
+All the categories of the food available and their cost is being maintained into this module. The user will receive notifications about the weekly specials which can be added to their Thali at an additional cost.
+GPS Module:
+The user can track the location of the dabbawala to know exactly when the food will be delivered to them.
+Payment Module:
+Payment of the food will be done in this module using Cash On Delivery (COD) or Online Payment.
+
+User Classes and Characteristics
+Many users such as faculty, students and system admin can use the system. Every user  with a valid user id and password will be able to use the various features provided by the system to the users. 
+
+
+USER ACCESS
+PRIVILEGES
+Service Users
+Order Dabba
+Order Thali
+Cancel Order 
+Track Dabbawala
+Dabbawala
+Receive orders of the users
+Process orders.
+System
+Maintain Database of the users and their orders.
+Send Notification  to the users
+Create bill and send it to the user
+
+Operating Environment
+Software:
+Android software development kit (SDK)
+Android Studio
+Java Development Kit (JDK)
+MySQL,a relational database which will save the data at the backend.
+
+Design and Implementation Constraints
+The user can cancel their order only before the Dabbawala is out for delivery. The user can choose a thali only from the limited list of thalis and weekly specials.
+User Documentation
+A help option will be provided in the menu bar  of Dabbastation where all the basic information that the user requires for using the functionality of the system will be present.
+Assumptions and Dependencies
+We assume that the users have an Android phone and the basic  knowledge of how to use an application on an Android phone.
+
+
+External Interface Requirements
+User Interfaces
+All the functionality Dabbawala have a screen-based interaction .It incorporates with effective GUI concepts and focuses on user-friendly system.Home page will have graphical representation of the usage of the system for new users. Every page will have the help option.
+Hardware Interfaces
+Server side:
+Operating system : Android System
+Processor : Pentium 3.0 GHZ or higher
+Ram : 256 Mb or more
+Hard Drive : 10 GB or more
+Client side:
+Operating system : Android System
+Processor : Android version :4.0 and above
+Mobile Storage: 500Mbs
+Software Interfaces
+DATABASE : SQLite 3
+APPLICATION: Android, Java
+
+Communications Interfaces
+Composite UI threads will be used to communicate between activities and fragments and email  notifications will also be sent to the user’s email ID.
+
+
+
+
+
+System Features
+1.  Authenticated login
+4.1.1 Description and Priority
+The user enter user id and password in the appropriate text box.
+The application provides access only for validated user id and passwords
+If user forget the password the system will send the link to your email address which will allow user to change their password.
+4.1.2 Stimulus /Response Sequences 
+The user id will be characters with valid range of 10 and range of password can vary from 8-20.After entering user id and password the system will open an interface where user can interact with the system.
+4.1.3 Functional Requirement
+The user-id enter should be a valid otherwise error message will be displayed.
+Fields are mandatory and login will not execute if even single input is left blank.
+
+2. Notification system:
+4.2.1 Description and Priority
+The user will receive a notification after the Dabbawala has left for delivery and also after the Dabba or Thali has been delivered. A notification will also be sent whenever there is a change in the menu. The user will also get reminders to order their daily Dabba or Thali and will also be reminded about the end of their monthly or quarterly Dabba plan.
+4.2.2 Stimulus /Response Sequences 
+The user will receive a notification about the current status of their Dabba or Thali and also about their Dabba plan.
+4.2.3 Functional Requirement
+The user should have a working internet connection to receive notifications on the app.
+
+3.Order Dabba:
+4.3.1 Description and Priority
+After logging in into the system ,the user can order dabbas on daily,monthly or quarterly basis. He will have to enter the pickup and destination address after which confirmation for the order will be taken. 
+4.3.2 Stimulus /Response Sequences 
+       After the confirmation of the order ,the order will be visible in the view orders tab and the user will be able to track the order as it is out for delivery.
+4.3.3 Functional Requirement
+             The system will send an email to the user on the email registered in personal details stating the confirmation of the order. 
+
+4.Make Payment
+4.4.1 Description and Priority
+Online payment process proceeds after applying for dabba service  and user with Daily Dabba plan can pay through COD service
+4.4.2 Stimulus /Response Sequences 
+User will be redirected to the checkout page. 
+4.4.3 Functional Requirement
+If user chooses daily Dabba plan, user can pay by COD service and in other case user need to pay online and and valid card data need to be entered .
+
+
+
+5.Track order
+4.5.1 Description and Priority
+The user can track the location of the Dabbawala when he is out for delivery.
+This will help the user to know exactly how long will it take the Dabbawala to reach the drop location.
+4.5.2 Stimulus /Response Sequences 
+When user clicks on Track Order, the map will be displayed which will show the current location of the Dabbawala.
+4.5.3 Functional Requirement
+The user will only be able to track the Dabbawala after they have received the notification that the Dabbawala is out for delivery.
+
+
+
+5.     Other Nonfunctional Requirements
+Performance Requirements
+The system will be interactive
+The system will respond quickly and will have less delays
+Safety Requirements
+Information transmission will be securely transmitted to server without any changes in information
+Security Requirements
+Robust software.
+Reliable performance.
+The main security concern is for users account hence proper login mechanism will be used to avoid hacking.m
+Software Quality Attributes
+It is advised to take a backup for the system in the periodic manner .If the internet service gets disrupted while sending information to the server, the information can be send again for verification.
+Business Rules
+Duplication of the system without consent of the creators is considered an offense and will be dealt with strictly
+
+
